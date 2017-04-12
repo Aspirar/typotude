@@ -1,0 +1,15 @@
+.typing-text {
+    width: 50%;
+    background-color: black;
+    color: #ccc;
+    padding: 4rem 2rem;
+    display: flex;
+    overflow: auto;
+    font-size: 1.25em;
+    line-height: 1.5;
+}
+
+.typing-text__paragraph {
+    max-width: 30rem;
+    margin: auto;
+}

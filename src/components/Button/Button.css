@@ -1,0 +1,12 @@
+.button {
+    display: inline-block;
+    padding: .5em 1em;
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: white;
+}
+
+.button:active {
+    background-color: black;
+    color: white;
+}

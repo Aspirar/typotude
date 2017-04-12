@@ -1,0 +1,10 @@
+.splash__wrapper {
+    display: flex;
+    height: 100%;
+}
+
+.splash__content {
+    margin: auto;
+    text-transform: uppercase;
+    text-align: center;
+}

@@ -1,0 +1,12 @@
+.test {
+    height: 100%;
+    display: flex;
+}
+
+.correct {
+    color: #8de567;
+}
+
+.incorrect {
+    color: #d8725b;
+}
