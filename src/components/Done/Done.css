@@ -1,0 +1,9 @@
+.done__wrapper {
+	display: flex;
+	height: 100%;
+}
+
+.done {
+	margin: auto;
+	text-transform: uppercase;
+}

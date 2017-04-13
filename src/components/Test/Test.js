@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 import TypingText from '../TypingText/TypingText';
 import TypingInput from '../TypingInput/TypingInput';
-import Timer from '../Timer/Timer';
+import Button from '../Button/Button';
 
 import './Test.css';
 
@@ -20,6 +20,18 @@ class Test extends Component {
 
         this.handleInputChange = this.handleInputChange.bind(this);
         this.transformText = this.transformText.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    componentDidMount() {
+        this.props.socket.on('get data', () => {
+            this.props.handleSubmit(this.state.input);
+            console.log('get');
+        });
+    }
+
+    handleSubmit() {
+        this.props.handleSubmit(this.state.input);
     }
 
     handleInputChange(e) {
@@ -94,10 +106,15 @@ class Test extends Component {
             <div className="test">
                 <TypingText text={this.state.text} />
                 <TypingInput input={this.state.input} handleChange={this.handleInputChange} />
-                <Timer />
+                <Button className="typing-input__submit" onClick={this.handleSubmit}>Submit</Button>
             </div>
         );
     }
 }
+
+Test.propTypes = {
+    handleSubmit: PropTypes.func.isRequired,
+    socket: PropTypes.object.isRequired
+};
 
 export default Test;

@@ -8,3 +8,15 @@
     text-transform: uppercase;
     text-align: center;
 }
+
+.splash__code {
+	font: inherit;
+	padding: .5em 1em;
+	outline: 0;
+	border: 1px solid black;
+}
+
+.splash__warning {
+	color: red;
+	margin-top: 1rem;
+}

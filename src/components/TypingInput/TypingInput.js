@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import Button from '../Button/Button';
 
 import './TypingInput.css';
 
@@ -11,7 +10,6 @@ class TypingInput extends Component {
                           placeholder="Begin typing here..."
                           value={this.props.input}
                           onChange={this.props.handleChange} />
-                <Button className="typing-input__submit">Submit</Button>
             </div>
         );
     }
